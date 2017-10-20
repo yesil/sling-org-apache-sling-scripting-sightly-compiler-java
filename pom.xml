@@ -42,9 +42,9 @@
     </description>
 
     <scm>
-        <connection>scm:svn:http://svn.apache.org/repos/asf/sling/trunk/bundles/scripting/sightly/java-compiler</connection>
-        <developerConnection>scm:svn:https://svn.apache.org/repos/asf/sling/trunk/bundles/scripting/sightly/java-compiler</developerConnection>
-        <url>http://svn.apache.org/repos/asf/sling/trunk/bundles/scripting/sightly/java-compiler</url>
+        <connection>scm:git:https://gitbox.apache.org/repos/asf/sling-org-apache-sling-scripting-sightly-compiler-java.git</conncetion>
+        <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/sling-org-apache-sling-scripting-sightly-compiler-java.git</developerConnection>
+        <url>https://gitbox.apache.org/repos/asf?p=sling-org-apache-sling-scripting-sightly-compiler-java.git</url>
     </scm>
 
     <properties>
