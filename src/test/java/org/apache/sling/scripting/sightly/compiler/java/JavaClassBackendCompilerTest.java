@@ -24,6 +24,7 @@ import javax.script.Bindings;
 import javax.script.SimpleBindings;
 
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.scripting.sightly.compiler.CompilationUnit;
 import org.apache.sling.scripting.sightly.compiler.SightlyCompiler;
 import org.apache.sling.scripting.sightly.compiler.java.utils.CharSequenceJavaCompiler;
@@ -102,10 +103,14 @@ public class JavaClassBackendCompilerTest {
         ClassInfo classInfo = buildClassInfo("imports");
         String source = backendCompiler.build(classInfo);
         String expectedJavaOutput = IOUtils.toString(this.getClass().getResourceAsStream("/imports.html.java"), "UTF-8");
-        assertEquals(expectedJavaOutput, source);
+        assertEquals(normalizeLineEndings(expectedJavaOutput), normalizeLineEndings(source));
         ClassLoader classLoader = JavaClassBackendCompilerTest.class.getClassLoader();
         CharSequenceJavaCompiler<RenderUnit> compiler = new CharSequenceJavaCompiler<>(classLoader, null);
         compiler.compile(classInfo.getFullyQualifiedClassName(), source);
+    }
+    
+    private static final String normalizeLineEndings(String input) {
+        return StringUtils.replaceAll(input, "\r\n", "\n");
     }
 
     private ClassInfo buildClassInfo(final String info) {
