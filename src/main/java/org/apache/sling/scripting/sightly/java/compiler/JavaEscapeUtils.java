@@ -135,7 +135,7 @@ public class JavaEscapeUtils {
      * @return Java package corresponding to the given scriptName
      */
     public static String makeJavaPackage(String scriptName) {
-        String classNameComponents[] = StringUtils.split(scriptName, '/');
+        String classNameComponents[] = StringUtils.split(scriptName, "/\\");
         StringBuilder legalClassNames = new StringBuilder();
         for (int i = 0; i < classNameComponents.length; i++) {
             legalClassNames.append(makeJavaIdentifier(classNameComponents[i]));
