@@ -35,7 +35,6 @@ import org.apache.sling.scripting.sightly.compiler.expression.nodes.StringConsta
 import org.apache.sling.scripting.sightly.compiler.expression.nodes.TernaryOperator;
 import org.apache.sling.scripting.sightly.compiler.expression.nodes.UnaryOperation;
 import org.apache.sling.scripting.sightly.compiler.expression.nodes.UnaryOperator;
-import org.apache.sling.scripting.sightly.java.compiler.JavaEscapeUtils;
 import org.apache.sling.scripting.sightly.java.compiler.impl.operator.BinaryOpGen;
 import org.apache.sling.scripting.sightly.java.compiler.impl.operator.Operators;
 import org.apache.sling.scripting.sightly.java.compiler.impl.operator.UnaryOpGen;

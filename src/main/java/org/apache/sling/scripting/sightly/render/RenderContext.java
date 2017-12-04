@@ -18,8 +18,6 @@ package org.apache.sling.scripting.sightly.render;
 
 import javax.script.Bindings;
 
-import org.apache.sling.scripting.sightly.extension.RuntimeExtension;
-
 import org.osgi.annotation.versioning.ProviderType;
 
 /**
