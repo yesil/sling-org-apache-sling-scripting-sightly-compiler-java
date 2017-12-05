@@ -41,11 +41,11 @@ public interface RenderContext {
     Bindings getBindings();
 
     /**
-     * Call one of the registered {@link RuntimeExtension}s.
+     * Call one of the registered {@link org.apache.sling.scripting.sightly.extension.RuntimeExtension}s.
      *
      * @param functionName the name under which the extension is registered
      * @param arguments    the extension's arguments
-     * @return the {@link RuntimeExtension}'s result
+     * @return the {@link org.apache.sling.scripting.sightly.extension.RuntimeExtension}'s result
      */
     Object call(String functionName, Object... arguments);
 }
