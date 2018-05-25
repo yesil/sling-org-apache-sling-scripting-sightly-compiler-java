@@ -57,6 +57,9 @@ public class GlobalShadowChecker extends AbstractCommandVisitor {
     public void visit(Loop.Start loopStart) {
         checkVariable(loopStart.getItemVariable());
         checkVariable(loopStart.getIndexVariable());
+        checkVariable(loopStart.getBeginVariable());
+        checkVariable(loopStart.getStepVariable());
+        checkVariable(loopStart.getEndVariable());
     }
 
     @Override
