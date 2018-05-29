@@ -51,6 +51,7 @@ public class Operators {
         representationMap.put(BinaryOperator.GEQ, new ComparisonOpGen(BinaryOperator.GEQ));
         representationMap.put(BinaryOperator.STRICT_EQ, new StrictEqGenOp(false));
         representationMap.put(BinaryOperator.STRICT_NEQ, new StrictEqGenOp(true));
+        representationMap.put(BinaryOperator.IN, new InOpGen());
 
         unaryMapping.put(UnaryOperator.LENGTH, LengthOpGen.INSTANCE);
         unaryMapping.put(UnaryOperator.IS_WHITESPACE, IsWhiteSpaceGen.INSTANCE);

@@ -252,6 +252,10 @@ public class JavaSource {
         return property(className, "class").startCall("getName", true).endCall();
     }
 
+    public JavaSource instanceOf(String className) {
+        return append(" instanceof ").append(className);
+    }
+
     private StringBuilder indent() {
         for (int i = 0; i < indentLevel; i++) {
             builder.append(INDENT);
