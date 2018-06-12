@@ -42,7 +42,7 @@ public class NumericOpGen implements BinaryOpGen {
     public void generate(JavaSource source, ExpressionTranslator visitor, TypedNode left, TypedNode right) {
         Type commonType = commonType(left.getType(), right.getType());
         GenHelper.typeCoercion(source, visitor, left, commonType);
-        source.append(javaOperator);
+        source.append(" ").append(javaOperator).append(" ");
         GenHelper.typeCoercion(source, visitor, right, commonType);
     }
 
