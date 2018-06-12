@@ -72,7 +72,7 @@ public abstract class LogicalOpGen implements BinaryOpGen {
     private void generateWithOperator(JavaSource source, SideEffectVisitor visitor,
                                       ExpressionNode leftNode, ExpressionNode rightNode) {
         leftNode.accept(visitor);
-        source.append(javaOperator);
+        source.append(" ").append(javaOperator).append(" ");
         rightNode.accept(visitor);
     }
 }

@@ -40,7 +40,7 @@ public final class ConcatenateOpGen implements BinaryOpGen {
     @Override
     public void generate(JavaSource source, ExpressionTranslator visitor, TypedNode left, TypedNode right) {
         GenHelper.typeCoercion(source, visitor, left, Type.STRING);
-        source.append("+");
+        source.append(" + ");
         GenHelper.typeCoercion(source, visitor, right, Type.STRING);
     }
 }

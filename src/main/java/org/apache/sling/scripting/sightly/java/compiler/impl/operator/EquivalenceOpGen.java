@@ -77,7 +77,7 @@ public class EquivalenceOpGen implements BinaryOpGen {
 
     private void generateEqualsOperator(JavaSource source, SideEffectVisitor visitor, ExpressionNode leftNode, ExpressionNode rightNode) {
         leftNode.accept(visitor);
-        source.append(operator());
+        source.append(" ").append(operator()).append(" ");
         rightNode.accept(visitor);
     }
 
