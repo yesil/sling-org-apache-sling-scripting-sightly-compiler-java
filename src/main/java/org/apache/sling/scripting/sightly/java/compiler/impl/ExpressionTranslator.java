@@ -144,15 +144,14 @@ public final class ExpressionTranslator extends SideEffectVisitor {
         String runtimeCallName = runtimeCall.getFunctionName();
         source.startMethodCall(SourceGenConstants.RENDER_CONTEXT_INSTANCE, SourceGenConstants.RUNTIME_CALL_METHOD)
                 .stringLiteral(runtimeCallName);
-        int index = 0;
         for (ExpressionNode arg : runtimeCall.getArguments()) {
             source.separateArgument();
-            if (RuntimeFunction.USE.equals(runtimeCallName) && index == 0) {
+            if (RuntimeFunction.USE.equals(runtimeCallName)) {
                 if (arg instanceof StringConstant) {
                     StringConstant constant = (StringConstant) arg;
                     String className = constant.getText();
                     if (imports.contains(className)) {
-                        source.className(className.substring(className.lastIndexOf('.') + 1));
+                        source.className(className);
                     } else {
                         visit(arg);
                     }

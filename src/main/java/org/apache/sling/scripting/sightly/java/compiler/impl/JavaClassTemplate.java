@@ -24,7 +24,6 @@ public class JavaClassTemplate {
 
     private String classTemplate;
     private static final String PACKAGE_NAME = "PackageName";
-    private static final String IMPORTS = "Imports";
     private static final String CLASS_NAME = "ClassName";
     private static final String MAIN_BODY = "MainBody";
     private static final String TEMPLATE_INIT = "SubTemplateMapInit";
@@ -50,10 +49,6 @@ public class JavaClassTemplate {
 
     public void setPackageName(String name) {
         setPart(PACKAGE_NAME, name);
-    }
-
-    public void setImports(String imports) {
-        setPart(IMPORTS, imports);
     }
 
     @Override

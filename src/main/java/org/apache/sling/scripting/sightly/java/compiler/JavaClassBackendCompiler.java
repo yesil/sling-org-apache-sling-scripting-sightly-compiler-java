@@ -85,13 +85,6 @@ public final class JavaClassBackendCompiler implements BackendCompiler {
         JavaClassTemplate mainTemplate = newMainTemplate();
         mainTemplate.setPackageName(classInfo.getPackageName());
         mainTemplate.setClassName(classInfo.getSimpleClassName());
-        StringBuilder imports = new StringBuilder();
-        for (String importClass : unitBuilder.getImports()) {
-            if (JAVA_IMPORTS_ANALYZER.allowImport(importClass)) {
-                imports.append("import ").append(importClass).append(";").append(System.lineSeparator());
-            }
-        }
-        mainTemplate.setImports(imports.toString());
         processCompilationResult(compilationOutput, mainTemplate);
         return mainTemplate.toString();
     }

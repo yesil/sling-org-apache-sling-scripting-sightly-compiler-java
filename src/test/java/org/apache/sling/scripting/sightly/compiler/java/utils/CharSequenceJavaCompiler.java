@@ -182,7 +182,7 @@ public class CharSequenceJavaCompiler<T> {
                     .keySet(), diagnostics);
         }
         try {
-            // For each class name in the inpput map, get its compiled
+            // For each class name in the input map, get its compiled
             // class and put it in the output map
             Map<String, Class<T>> compiled = new HashMap<>();
             for (String qualifiedClassName : classes.keySet()) {

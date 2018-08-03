@@ -95,7 +95,7 @@ public class JavaClassBackendCompilerTest {
     }
 
     @Test
-    public void generateImportStatements() throws Exception {
+    public void testJavaUseApiDependencies() throws Exception {
         CompilationUnit compilationUnit = TestUtils.readScriptFromClasspath("/imports.html");
         JavaClassBackendCompiler backendCompiler = new JavaClassBackendCompiler();
         SightlyCompiler sightlyCompiler = new SightlyCompiler();

@@ -25,9 +25,6 @@ import javax.script.Bindings;
 import org.apache.sling.scripting.sightly.java.compiler.RenderUnit;
 import org.apache.sling.scripting.sightly.render.RenderContext;
 
-import org.apache.sling.scripting.sightly.Record;
-
-
 public final class Test_imports extends RenderUnit {
 
     @Override
@@ -38,10 +35,14 @@ public final class Test_imports extends RenderUnit {
 // Main Template Body -----------------------------------------------------------------------------
 
 Object _global_record = null;
+Object _global_pojoa = null;
+Object _global_pojob = null;
 Object _global_js = null;
 Object _global_pojo = null;
 out.write("\n");
-_global_record = renderContext.call("use", Record.class.getName(), obj());
+_global_record = renderContext.call("use", org.apache.sling.scripting.sightly.Record.class.getName(), obj());
+_global_pojoa = renderContext.call("use", org.apache.sling.scripting.sightly.compiler.java.utils.fixture.a.TestPojo.class.getName(), obj());
+_global_pojob = renderContext.call("use", org.apache.sling.scripting.sightly.compiler.java.utils.fixture.b.TestPojo.class.getName(), obj());
 _global_js = renderContext.call("use", "script.js", obj());
 _global_pojo = renderContext.call("use", "Pojo", obj());
 out.write("<div></div>\n");
